@@ -1,46 +1,46 @@
-body{
+body {
   font-family: Arial, Helvetica, sans-serif;
 }
 
-.label{
+.label {
   font-weight: bold;
   display: inline;
 }
 
-.description{
+.description {
   color: #3c3c3c;
   text-align: justify;
   display: inline;
   word-wrap: break-word;
 }
 
-.navContainer{
-  clear:both;
-  overflow:auto;
+.navContainer {
+  clear: both;
+  overflow: auto;
   background-color: #000;
   box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.2);
   width: 100%;
 }
 
-.navContainer img{
+.navContainer img {
   width: 80px;
   height: 80px;
   float: left;
 }
 
-nav{
+nav {
   float: left;
   padding: 0;
   margin: 0;
 }
 
-nav ul{
+nav ul {
   list-style-type: none;
   padding: 0;
   margin: 0;
 }
 
-nav ul li{
+nav ul li {
   display: inline-block;
   padding: 30px 40px;
   font-size: 20px;
@@ -48,17 +48,17 @@ nav ul li{
   cursor: pointer;
 }
 
-nav ul li:hover{
+nav ul li:hover {
   transition: background-color 0.3s ease-in-out;
   background-color: #383838;
 }
 
-nav ul li a{
+nav ul li a {
   color: #ccc;
   text-decoration: none;
 }
 
-.filterContainer{
+.filterContainer {
   border-bottom: 1px solid #ccc;
   padding: 10px;
   text-align: center;
@@ -66,7 +66,7 @@ nav ul li a{
   color: #3e3e3e;
 }
 
-.filterContainer form input{
+.filterContainer form input {
   margin: 10px;
   font-size: 20px;
   min-width: 350px;
@@ -75,23 +75,23 @@ nav ul li a{
   outline: none;
 }
 
-.filterContainer form button{
-  font-size: 20px; 
+.filterContainer form button {
+  font-size: 20px;
   color: #3e3e3e;
   background-color: #fff;
   border: 1px solid #000;
-  padding:10px;
+  padding: 10px;
   cursor: pointer;
   border-radius: 4px;
 }
 
-.filterContainer form button:hover{
+.filterContainer form button:hover {
   transition: background-color 0.3s ease-in-out;
   background-color: #383838;
-  color:#fff;
+  color: #fff;
 }
 
-.jewelsList{
+.jewelsList {
   min-width: 50%;
   margin-top: 10px;
   padding: 5px;
@@ -104,7 +104,7 @@ nav ul li a{
   align-content: stretch;
 }
 
-.jewelCard{
+.jewelCard {
   border: 1px solid #3e3e3e;
   border-radius: 6px;
   min-width: 290px;
@@ -115,7 +115,7 @@ nav ul li a{
   align-self: auto;
 }
 
-.cardImage{
+.cardImage {
   padding: 10px;
   height: 100px;
   background-color: #cecece;
@@ -123,7 +123,7 @@ nav ul li a{
   border-radius: 4px 4px 0px 0px;
 }
 
-.cardImage img{
+.cardImage img {
   max-width: 100%;
   max-height: 100%;
   display: block;
@@ -132,12 +132,12 @@ nav ul li a{
   cursor: pointer;
 }
 
-.jewelDetails{
+.jewelDetails {
   padding: 5px;
   margin: 0px;
 }
 
-.modalContainer{
+.modalContainer {
   width: 100%;
   height: 100%;
   margin: 0;
@@ -153,7 +153,7 @@ nav ul li a{
   position: fixed;
 }
 
-.modalBody{
+.modalBody {
   min-width: 600px;
   min-height: 500px;
   display: inline-block;
@@ -163,7 +163,7 @@ nav ul li a{
   padding: 10px;
 }
 
-.modalBody button{
+.modalBody button {
   border-radius: 20px;
   font-size: 20px;
   border: 1px solid #000;
@@ -173,23 +173,22 @@ nav ul li a{
   cursor: pointer;
 }
 
-.modalBody button:hover{
+.modalBody button:hover {
   transition: background-color 0.3s ease-in-out;
   background-color: #383838;
-  color:#fff;
+  color: #fff;
 }
 
-.modalBody img{
-  min-width: 100%;
-  min-height: 100%;
+.modalBody img {
+  max-width: 70%;
+  max-height: 70%;
   display: block;
   position: relative;
   margin: 0 auto;
 }
 
-@media screen and (max-width: 400px){
-
-  .modalBody{
+@media screen and (max-width: 400px) {
+  .modalBody {
     max-width: 100%;
     max-height: 100%;
     min-width: 100%;
@@ -199,19 +198,19 @@ nav ul li a{
     padding-top: 30px;
   }
 
-  .modalBody button{
+  .modalBody button {
     margin-right: 10px;
   }
 
-  .modalBody img{
-  max-width: 100%;
-  max-height: 100%;
-  display: block;
-  position: relative;
-  margin: 0 auto;
+  .modalBody img {
+    max-width: 100%;
+    max-height: 100%;
+    display: block;
+    position: relative;
+    margin: 0 auto;
   }
 }
 
-.hiddenModal{
+.hiddenModal {
   display: none;
 }
