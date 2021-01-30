@@ -3,15 +3,11 @@ import JewelCard from './jewelCard';
 
 class JewelsList extends Component{
     render(){
+        const {onShowHideModal, jewels} = this.props;
+
         return(
             <div className="jewelsList">
-                <JewelCard />
-                <JewelCard />
-                <JewelCard />
-                <JewelCard />
-                <JewelCard />
-                <JewelCard />
-                <JewelCard />
+                {jewels.map( jewel =>  <JewelCard key={jewel.id} jewel={jewel} onShowHideModal={onShowHideModal} />)} 
             </div>
         );
     }
