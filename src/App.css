@@ -2,9 +2,42 @@ body {
   font-family: Arial, Helvetica, sans-serif;
 }
 
+.container{
+  display: flex;
+  flex-direction: column;
+}
+
 .label {
   font-weight: bold;
   display: inline;
+}
+
+.btn{
+  font-size: 20px;
+  color: #3e3e3e;
+  background-color: #fff;
+  border: 1px solid #000;
+  padding: 10px;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+.btn:hover, .modalbtn:hover{
+  transition: background-color 0.3s ease-in-out;
+  background-color: #383838;
+  color: #fff;
+}
+
+.modalBtn{
+  border-radius: 20px;
+  font-size: 20px;
+  border: 1px solid #000;
+  background-color: #fff;
+  float: right;
+  margin-bottom: 10px;
+  cursor: pointer;
+  width: 100%;
+  display: block;
 }
 
 .description {
@@ -15,7 +48,7 @@ body {
 }
 
 .navContainer {
-  clear: both;
+  display: block;
   overflow: auto;
   background-color: #000;
   box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.2);
@@ -26,6 +59,16 @@ body {
   width: 80px;
   height: 80px;
   float: left;
+}
+
+.navAndLogo{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.navAndLogo img{
+  margin-left: 10%;
 }
 
 nav {
@@ -58,12 +101,43 @@ nav ul li a {
   text-decoration: none;
 }
 
+.social, .shoppingCartCounter{
+  position: relative;
+  display: inline;
+  float: right;
+  top: 25px;
+}
+
+.shoppingCartCounter{
+  margin: 5px;
+  width: 200px;
+  top: 20px;
+}
+
+.shoppingCartCounter a{
+  text-decoration: none;
+  color: #fff;
+  font-size: 30px;
+  text-decoration: none;
+}
+
+.social a{
+  font-size: 30px;
+  color: #fff;
+  text-decoration: none;
+  margin: 15px;
+}
+
 .filterContainer {
-  border-bottom: 1px solid #ccc;
   padding: 10px;
   text-align: center;
   font-size: 20px;
-  color: #3e3e3e;
+  margin-right: 10%;
+}
+
+.filterContainer form{
+  position: relative;
+  margin-top: 20%;
 }
 
 .filterContainer form input {
@@ -75,27 +149,11 @@ nav ul li a {
   outline: none;
 }
 
-.filterContainer form button {
-  font-size: 20px;
-  color: #3e3e3e;
-  background-color: #fff;
-  border: 1px solid #000;
-  padding: 10px;
-  cursor: pointer;
-  border-radius: 4px;
-}
-
-.filterContainer form button:hover {
-  transition: background-color 0.3s ease-in-out;
-  background-color: #383838;
-  color: #fff;
-}
-
 .jewelsList {
-  min-width: 50%;
+  align-self:center;
+  display: block;
   margin-top: 10px;
   padding: 5px;
-  border: 1px solid black;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
@@ -105,14 +163,18 @@ nav ul li a {
 }
 
 .jewelCard {
+  background-color: #fff;
   border: 1px solid #3e3e3e;
   border-radius: 6px;
-  min-width: 290px;
-  max-width: 290px;
-  min-height: 240px;
   box-shadow: 2px 3px 3px rgba(0, 0, 0, 0.3);
   margin: 5px;
   align-self: auto;
+}
+
+.jewelListElement{
+  min-width: 290px;
+  max-width: 290px;
+  min-height: 240px;
 }
 
 .cardImage {
@@ -163,22 +225,6 @@ nav ul li a {
   padding: 10px;
 }
 
-.modalBody button {
-  border-radius: 20px;
-  font-size: 20px;
-  border: 1px solid #000;
-  background-color: #fff;
-  float: right;
-  margin-bottom: 10px;
-  cursor: pointer;
-}
-
-.modalBody button:hover {
-  transition: background-color 0.3s ease-in-out;
-  background-color: #383838;
-  color: #fff;
-}
-
 .modalBody img {
   max-width: 70%;
   max-height: 70%;
@@ -211,6 +257,89 @@ nav ul li a {
   }
 }
 
-.hiddenModal {
+.hidden {
   display: none;
+}
+
+.contactForm{
+  background-color: #fff;
+  min-width: 100%;
+  max-width: 500px;
+  padding: 10px;
+  border: 1px solid black;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.contactForm fieldset{
+  padding: 5px;
+  margin: 5px;
+  width: auto;
+  border-radius: 4px;
+  box-shadow: 2px 3px 3px rgba(0,0,0,0.5);
+}
+
+.controlGroup{
+  position: relative;
+  margin: 5px;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+
+.contactForm label{
+  position: relative;
+  margin-bottom: 1px;
+}
+
+.contactForm input, .contactForm textarea{
+  margin-bottom: 3px;
+  font-size: 20px;
+  resize: none;
+}
+
+.contactForm button{
+  position: relative;
+  float: right;
+}
+
+.messageLabel{
+  vertical-align: top;
+}
+
+.cartProducts{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  align-content: stretch;
+}
+
+
+.cartJewelCard{
+  min-width: 150px;
+  max-width: 150px;
+  min-height: 160px;
+}
+
+.cartJewelCard img {
+  max-width: 90%;
+  max-height: 90%;
+  display: block;
+  position: relative;
+  margin: 0 auto;
+}
+
+.cartJewelCard button{
+  width: 30px;
+  height: 30px;
+  top: 10px;
+  right: 10px;
+}
+
+.addCartBtn{
+  display: block;
+  margin: 10px auto;
 }
