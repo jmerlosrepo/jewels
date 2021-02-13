@@ -3,11 +3,11 @@ import JewelCard from './jewelCard';
 
 class JewelsList extends Component{
     render(){
-        const {onShowHideModal, jewels} = this.props;
+        const {jewels, onShowHideModal, onSendToCart} = this.props;
 
         return(
             <div className="jewelsList">
-                {jewels.map( jewel =>  <JewelCard key={jewel.id} jewel={jewel} onShowHideModal={onShowHideModal} />)} 
+                {(!jewels || jewels.length === 0) ? <p>No jewels in the data base.</p> : jewels.map( jewel =>  <JewelCard key={jewel.id} jewel={jewel} onShowHideModal={onShowHideModal} onSendToCart={onSendToCart} />)} 
             </div>
         );
     }

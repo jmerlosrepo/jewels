@@ -1,2 +1,5 @@
 # jewels
-Virtul catalogue of jewelry
+Virtual catalogue of jewelry
+
+Run page
+npm run start
