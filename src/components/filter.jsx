@@ -6,9 +6,9 @@ class Filter extends Component {
     return (
       <div className="filterContainer">
         <form>
-          <label htmlFor="">Buscar: </label>
-          <input type="text" placeholder="Escribe lo que quieras buscar..." />
+          <input type="text" placeholder="Buscar productos..." />
           <button
+            className="btn"
             onClick={(e) => {
               onSearch(e, "ring");
             }}
