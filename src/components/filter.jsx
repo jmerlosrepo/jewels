@@ -4,7 +4,7 @@ class Filter extends Component {
   render() {
     const { onSearch } = this.props;
     return (
-      <div className="filterContainer">
+      <div className="filterContainer grayBackgroundColor">
         <form>
           <input type="text" placeholder="Buscar productos..." />
           <button

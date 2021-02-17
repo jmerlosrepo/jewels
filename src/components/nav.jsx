@@ -1,6 +1,6 @@
 import React from "react";
 import ShoppingCartCounter from "./shoppingCartCounter";
-import { BrowserRouter as Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 const Navigation = ({ jewelsCount }) => {
   return (
@@ -20,12 +20,12 @@ const Navigation = ({ jewelsCount }) => {
         </ul>
       </nav>
       <div className="social">
-        {/* <a target="_blank" href="#">
+        <a target="_blank" href="#">
           <i className="fa fa-facebook-official" aria-hidden="true"></i>
         </a>
         <a target="_blank" href="#">
           <i className="fa fa-instagram" aria-hidden="true"></i>
-        </a> */}
+        </a>
       </div>
       <ShoppingCartCounter jewelsCount={jewelsCount} />
     </div>

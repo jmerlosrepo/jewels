@@ -1,8 +1,6 @@
 import React, {Component} from 'react';
 import Navigation from './components/nav';
-import Filter from './components/filter';
-import JewelsList from './components/jewelsList';
-import ImageModal from './components/imageModal';
+import Home from './components/home';
 import dataService from './services/data.service';
 import ContactForm from './components/contactForm';
 import {
@@ -69,18 +67,18 @@ class App extends Component {
       <div className="container">
         <Navigation jewelsCount={jewelsIntoCart.length} />
         <Switch>
-          <Route exact path="/">
-            <div className="navAndLogo">
-              <Filter onSearch={this.handleFindByText} />
-              <img src="http://localhost:3000/assets/logo.jpg" width="400" height="300" alt="logo"/>
-            </div>
-            <JewelsList jewels={jewels} onShowHideModal={this.handleHideShowModal} onSendToCart={this.handleSendToCart} />
-            <ImageModal onCloseModal={this.handleHideShowModal} visible={modalJewelVisible} image={modalJewelImage} />
-          </Route>
-          <Route path="/shoppingCart">
-            <ContactForm jewelsToQuery={jewelsIntoCart} onRemoveJewelFromCart={this.handleRemoveJewelFromCart} />
-          </Route>
-          <Route path="/contact"></Route>
+          <Route exact path="/" component={() => <Home 
+            jewels={jewels}
+            modalJewelVisible={modalJewelVisible}
+            modalJewelImage={modalJewelImage}
+            onShowHideModal={this.handleHideShowModal}
+            onSendToCart={this.handleSendToCart}
+            onCloseModal={this.handleHideShowModal}
+            onFindByText={this.handleFindByText} 
+          /> } 
+          />
+          <Route path="/shoppingCart" component={() => <ContactForm jewelsToQuery={jewelsIntoCart} onRemoveJewelFromCart={this.handleRemoveJewelFromCart} />} />
+          <Route path="/contact">Contacto</Route>
         </Switch>
       </div>
       );

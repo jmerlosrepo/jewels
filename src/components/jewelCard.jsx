@@ -6,7 +6,7 @@ class JewelCard extends Component {
     const { image, id, category, description, price, selected } = jewel;
 
     return (
-      <div className="jewelCard jewelListElement">
+      <div className="jewelCard jewelListElement grayBackgroundColor">
         <div className="cardImage">
           <img
             onClick={() => onShowHideModal(image)}

@@ -1,5 +1,6 @@
 body {
   font-family: Arial, Helvetica, sans-serif;
+  background-color: #f5f5f5;
 }
 
 .container {
@@ -12,28 +13,41 @@ body {
   display: inline;
 }
 
+.grayBakgroundColor {
+  background-color: #dedcdc;
+}
+
+input,
+textarea {
+  border: 1px solid #d1b675;
+  background-color: #f5f5f5;
+  outline: none;
+}
+
 .btn {
   font-size: 20px;
   color: #3e3e3e;
-  background-color: #fff;
-  border: 1px solid #000;
+  background-color: #bda05e;
+  border: 1px solid #bda05e;
+  color: #fff;
   padding: 10px;
   cursor: pointer;
   border-radius: 4px;
+  outline: none;
 }
 
 .btn:hover,
 .modalbtn:hover {
   transition: background-color 0.3s ease-in-out;
-  background-color: #383838;
+  background-color: #e6d3a8;
   color: #fff;
 }
 
 .modalBtn {
   border-radius: 20px;
   font-size: 20px;
-  border: 1px solid #000;
-  background-color: #fff;
+  border: 1px solid #a38133;
+  background-color: #a38133;
   float: right;
   margin-bottom: 10px;
   cursor: pointer;
@@ -51,7 +65,7 @@ body {
 .navContainer {
   display: block;
   overflow: auto;
-  background-color: #000;
+  background-color: #a38133;
   box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.2);
   width: 100%;
 }
@@ -94,11 +108,11 @@ nav ul li {
 
 nav ul li:hover {
   transition: background-color 0.3s ease-in-out;
-  background-color: #383838;
+  background-color: #bda05e;
 }
 
 nav ul li .anchor {
-  color: #ccc;
+  color: #fff;
   text-decoration: none;
 }
 
@@ -116,7 +130,7 @@ nav ul li .anchor {
   top: 20px;
 }
 
-.shoppingCartCounter a {
+.shoppingCartCounter .anchor {
   text-decoration: none;
   color: #fff;
   font-size: 30px;
@@ -148,7 +162,6 @@ nav ul li .anchor {
   min-width: 350px;
   padding: 10px;
   border-radius: 4px;
-  outline: none;
 }
 
 .jewelsList {
@@ -165,8 +178,7 @@ nav ul li .anchor {
 }
 
 .jewelCard {
-  background-color: #fff;
-  border: 1px solid #3e3e3e;
+  border: 1px solid #d1b675;
   border-radius: 6px;
   box-shadow: 2px 3px 3px rgba(0, 0, 0, 0.3);
   margin: 5px;
@@ -182,8 +194,8 @@ nav ul li .anchor {
 .cardImage {
   padding: 10px;
   height: 100px;
-  background-color: #cecece;
-  border-bottom: 1px solid #3e3e3e;
+  background-color: #e6d3a8;
+  border-bottom: 1px solid #d1b675;
   border-radius: 4px 4px 0px 0px;
 }
 
@@ -222,7 +234,7 @@ nav ul li .anchor {
   min-height: 500px;
   display: inline-block;
   background-color: #fff;
-  border: 2px solid #000;
+  border: 2px solid #d1b675;
   border-radius: 12px;
   padding: 10px;
 }
@@ -264,11 +276,10 @@ nav ul li .anchor {
 }
 
 .contactForm {
-  background-color: #fff;
+  background-color: #f5f5f5;
   min-width: 100%;
   max-width: 500px;
   padding: 10px;
-  border: 1px solid black;
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -279,6 +290,7 @@ nav ul li .anchor {
   margin: 5px;
   width: auto;
   border-radius: 4px;
+  border: 1px solid #d1b675;
   box-shadow: 2px 3px 3px rgba(0, 0, 0, 0.5);
 }
 

@@ -8,7 +8,7 @@ class ImageModal extends Component {
 
     return (
       <div className={isVisible}>
-        <div className="modalBody">
+        <div className="modalBody grayBackgroundColor">
           <button className="modalBtn" onClick={onCloseModal}>
             X
           </button>

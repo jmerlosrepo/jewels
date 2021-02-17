@@ -1,12 +1,14 @@
 import React from "react";
-import { BrowserRouter as Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 const ShoppingCartCounter = ({ jewelsCount }) => {
   return (
     <Link to="/shoppingCart">
       <div className="shoppingCartCounter">
-        <i className="fa fa-shopping-cart" aria-hidden="true"></i> (
-        {jewelsCount})
+        <div className="anchor">
+          <i className="fa fa-shopping-cart" aria-hidden="true"></i> (
+          {jewelsCount})
+        </div>
       </div>
     </Link>
   );
