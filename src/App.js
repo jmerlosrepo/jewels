@@ -16,7 +16,14 @@ class App extends Component {
     modalJewelImage: '',
     modalJewelVisible: false,
     jewels: [],
-    jewelsIntoCart: []
+    jewelsIntoCart: [],
+    order: {
+      name:"",
+      email:"",
+      phone:"",
+      message:"",
+      products:[]
+    }
   }
 
   componentDidMount = () => {
@@ -36,15 +43,9 @@ class App extends Component {
     jewelsFound.length > 0 ? this.setState({jewels: jewelsFound}) : this.setState({jewels: jewelsCopy});
   }
 
-  updateCardIfSelected = (jewel) => {
-    const jewelsCopy = [...this.state.jewels];
-    jewelsCopy.forEach(originalJewel => {
-      if (originalJewel.id === jewel.id){
-        originalJewel.selected = !jewel.selected;
-      }
-    });
-
-    return jewelsCopy;
+  handleOrderFormSubmit = (e, order) => {
+    e.preventDefault();
+    this.setState({order})
   }
 
   handleSendToCart = (e, jewel) => {
@@ -59,6 +60,17 @@ class App extends Component {
     const jewelsIntoCart = [...this.state.jewelsIntoCart];
     jewelsIntoCart.splice(jewelsIntoCart.indexOf(jewel), 1);
     this.setState({jewelsIntoCart, jewels: this.updateCardIfSelected(jewel)});
+  }
+
+  updateCardIfSelected = (jewel) => {
+    const jewelsCopy = [...this.state.jewels];
+    jewelsCopy.forEach(originalJewel => {
+      if (originalJewel.id === jewel.id){
+        originalJewel.selected = !jewel.selected;
+      }
+    });
+
+    return jewelsCopy;
   }
 
   render(){
