@@ -111,7 +111,7 @@ nav ul li:hover {
   background-color: #bda05e;
 }
 
-nav ul li .anchor {
+.anchor {
   color: #fff;
   text-decoration: none;
 }
