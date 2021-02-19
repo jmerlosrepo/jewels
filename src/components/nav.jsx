@@ -7,16 +7,16 @@ const Navigation = ({ jewelsCount }) => {
     <div className="navContainer">
       <nav>
         <ul>
-          <li>
-            <Link className="anchor" to="/">
-              Inicio
-            </Link>
-          </li>
-          <li>
-            <Link className="anchor" to="/contact">
-              Contacto
-            </Link>
-          </li>
+          <Link className="anchor" to="/">
+            <li>
+                Inicio
+            </li>
+          </Link>
+          <Link className="anchor" to="/contact">
+            <li>
+                Contacto
+            </li>
+          </Link>
         </ul>
       </nav>
       <div className="social">
