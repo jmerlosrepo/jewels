@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
+import dataService from './services/data.service';
 import Navigation from './components/nav';
 import Home from './components/home';
-import dataService from './services/data.service';
 import ContactForm from './components/contactForm';
 import {
   Switch,
@@ -17,7 +17,7 @@ class App extends Component {
     modalJewelVisible: false,
     jewels: [],
     jewelsIntoCart: [],
-    order: {}
+    postOrderResponse: {}
   }
 
   componentDidMount = () => {
@@ -39,7 +39,9 @@ class App extends Component {
 
   handleOrderFormSubmit = (e, order) => {
     e.preventDefault();
-    this.setState({order})
+    dataService.postJewelsOrder(order)
+    .then(postOrderResponse => this.setState({postOrderResponse}))
+    .catch(err => console.log(err))
   }
 
   handleSendToCart = (e, jewel) => {
@@ -83,7 +85,7 @@ class App extends Component {
             onFindByText={this.handleFindByText} 
           /> } 
           />
-          <Route path="/shoppingCart" component={() => <ContactForm jewelsToQuery={jewelsIntoCart} onRemoveJewelFromCart={this.handleRemoveJewelFromCart} />} />
+          <Route path="/shoppingCart" component={() => <ContactForm jewelsToQuery={jewelsIntoCart} onOrderSubmit={this.handleOrderFormSubmit} onRemoveJewelFromCart={this.handleRemoveJewelFromCart} />} />
           <Route path="/contact">Contacto</Route>
         </Switch>
       </div>
