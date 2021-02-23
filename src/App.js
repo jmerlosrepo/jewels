@@ -17,13 +17,7 @@ class App extends Component {
     modalJewelVisible: false,
     jewels: [],
     jewelsIntoCart: [],
-    order: {
-      name:"",
-      email:"",
-      phone:"",
-      message:"",
-      products:[]
-    }
+    order: {}
   }
 
   componentDidMount = () => {
